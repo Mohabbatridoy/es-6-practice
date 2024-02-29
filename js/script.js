@@ -202,7 +202,42 @@
 // console.log("I am after promise But print before promise because promise code is late.")
 
 
-//async and await:
-fetch('http://api.icndb.com/jokes/random/5000')
-    .then(response => response.json())
-    .then(data => console.log(data));
+// //async and await:
+// fetch('http://api.icndb.com/jokes/random/5000')
+//     .then(response => response.json())
+//     .then(data => console.log(data));
+
+
+//Set:
+let mySet = new Set([1,2,2,4]);
+
+//add
+mySet.add(3);
+mySet.add("Mohabbat")
+// mySet.clear();
+mySet.delete(4);  //delete
+
+// console.log(mySet.has(4));
+
+// console.log(mySet.size)  //size 
+
+// Iterating set 
+// for (x of mySet.values()){
+//     console.log(x);
+// }
+
+// let iter = mySet.entries();
+// console.log(iter.next())
+// console.log(iter.next())
+// console.log(iter.next())
+// console.log(iter.next())
+
+// for ([x] of mySet.entries()){
+//     console.log(x);
+// }
+
+// let iter = [...mySet.values()]
+// console.log(iter);
+
+mySet.forEach( value => console.log(value));
+// console.log(mySet)
