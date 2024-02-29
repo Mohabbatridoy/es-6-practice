@@ -211,11 +211,11 @@
 //Set:
 let mySet = new Set([1,2,2,4]);
 
-//add
-mySet.add(3);
-mySet.add("Mohabbat")
+// //add
+// mySet.add(3);
+// mySet.add("Mohabbat")
 // mySet.clear();
-mySet.delete(4);  //delete
+// mySet.delete(4);  //delete
 
 // console.log(mySet.has(4));
 
@@ -239,5 +239,43 @@ mySet.delete(4);  //delete
 // let iter = [...mySet.values()]
 // console.log(iter);
 
-mySet.forEach( value => console.log(value));
+// mySet.forEach( value => console.log(value));
 // console.log(mySet)
+
+
+//Maps:
+let myMap = new Map(
+    [
+        ['first key', 10],
+        ['second key', "Bohubrihi"]
+    ]
+);
+
+myMap.set('third key',"Hi world");
+// console.log(myMap.get('second key'));
+// console.log(myMap.has('er key'));
+
+//maps iterating: 
+// for ( [x,y] of myMap){
+//     console.log(x,y);
+// }
+
+// for ( x of myMap.keys()){
+//     console.log(x);
+// }
+
+// for ( x of myMap.values()){
+//     console.log(x);
+// }
+
+// for ( x of myMap.entries()){
+//     console.log(x);
+// }
+
+// myMap.forEach((value, key)=> console.log(value, key));
+
+let arr = Array.from(myMap.keys());
+console.log(arr)
+
+let arrr = Array.from(mySet.values());
+console.log(arrr)
