@@ -161,18 +161,48 @@
 // console.log(members.next());
 
 
-//generator: 
-function* genFunction(){
-    yield 1;
-    yield "Mohabbat";
-    console.log("this is after 2 yield");
-    yield "riody";
-}
+// //generator: 
+// function* genFunction(){
+//     yield 1;
+//     yield "Mohabbat";
+//     console.log("this is after 2 yield");
+//     yield "riody";
+// }
 
-let iter = genFunction();
+// let iter = genFunction();
 
-console.log(iter.next());
-console.log(iter.next());
-console.log(iter.next());
-console.log(iter.next());
+// console.log(iter.next());
+// console.log(iter.next());
+// console.log(iter.next());
+// console.log(iter.next());
 
+
+//promises:
+
+// let prom = new Promise((resolve, reject)=>{
+//     setTimeout(() => {
+//         let a;
+//         a = 1+1;
+//         if(a == 2){
+//             resolve('Success');
+//         }
+//         else{
+//             reject('Failed');
+//         }
+//     }, 4000);
+// })
+// //.then and .catch
+// prom.then((message) => {
+//     console.log("I am from then", + message);
+// }).catch((message) => {
+//     console.log("I am from catch", + message);
+// })
+
+
+// console.log("I am after promise But print before promise because promise code is late.")
+
+
+//async and await:
+fetch('http://api.icndb.com/jokes/random/5000')
+    .then(response => response.json())
+    .then(data => console.log(data));
