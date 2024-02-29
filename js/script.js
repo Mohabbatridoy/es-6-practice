@@ -114,12 +114,65 @@
 
 
 
-//Rest operator ... : 
-let fruits1 = ["apple","banana", "Mango"];
-let name = "Mohabbat Hossain Riody";
+// //Rest operator ... : 
+// let fruits1 = ["apple","banana", "Mango"];
+// let name = "Mohabbat Hossain Riody";
 
-let test = (name,fruit1, ...fruits) =>{
-    console.log(`name= ${name}. first fruit = ${fruit1}. Others fruits= ${fruits}.`);
+// let test = (name,fruit1, ...fruits) =>{
+//     console.log(`name= ${name}. first fruit = ${fruit1}. Others fruits= ${fruits}.`);
+// }
+
+// test(name,...fruits1,fruits1);
+
+
+
+//Symbols 
+// let iterable = "Hello";
+// iterable = [1,2,3,4,5,6,7];
+
+// let iter = iterable[Symbol.iterator]();
+
+// console.log(iter);
+
+// console.log(iter.next());
+// console.log(iter.next());
+// console.log(iter.next());
+// console.log(iter.next());
+// console.log(iter.next());
+// console.log(iter.next());
+
+// let names = ["Mohabbt","Ridoy","Hossain"];
+
+// function customIterator(arr){
+//     let i =0;
+
+//     return{
+//         next: function (){
+//             return i < arr.length ? {value : arr[i++] , done: false}:{value: undefined, done: true};
+//         }
+//     }
+// }
+
+// let members = customIterator(names);
+
+// console.log(members.next());
+// console.log(members.next());
+// console.log(members.next());
+// console.log(members.next());
+
+
+//generator: 
+function* genFunction(){
+    yield 1;
+    yield "Mohabbat";
+    console.log("this is after 2 yield");
+    yield "riody";
 }
 
-test(name,...fruits1,fruits1);
+let iter = genFunction();
+
+console.log(iter.next());
+console.log(iter.next());
+console.log(iter.next());
+console.log(iter.next());
+
